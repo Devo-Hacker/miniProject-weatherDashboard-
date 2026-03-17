@@ -1,0 +1,16 @@
+{
+  // Enable IntelliSense suggestions for all languages in the workspace.
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.tabCompletion": "on",
+
+  // Ensure HTML CSS class/ID suggestions work (useful for Tailwind / CSS frameworks)
+  "html.suggest.html5": true,
+  "css.validate": true,
+  "less.validate": true,
+  "scss.validate": true
+}
