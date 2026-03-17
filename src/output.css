@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --default-font-family: var(--font-sans);
@@ -163,9 +162,6 @@
   }
 }
 @layer utilities {
-  .m-5 {
-    margin: calc(var(--spacing) * 5);
-  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -187,6 +183,24 @@
   .h-\[60px\] {
     height: 60px;
   }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
+  }
+  .w-\[1\] {
+    width: 1;
+  }
+  .w-\[16px\] {
+    width: 16px;
+  }
+  .w-\[17px\] {
+    width: 17px;
+  }
+  .w-\[56px\] {
+    width: 56px;
+  }
+  .w-\[60px\] {
+    width: 60px;
+  }
   .w-\[90\%\] {
     width: 90%;
   }
@@ -202,6 +216,9 @@
   .border-collapse {
     border-collapse: collapse;
   }
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .resize {
     resize: both;
   }
@@ -211,11 +228,17 @@
   .justify-between {
     justify-content: space-between;
   }
+  .justify-center {
+    justify-content: center;
+  }
   .rounded-\[20px\] {
     border-radius: 20px;
   }
   .rounded-\[30px\] {
     border-radius: 30px;
+  }
+  .rounded-\[50\%\] {
+    border-radius: 50%;
   }
   .border {
     border-style: var(--tw-border-style);
