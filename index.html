@@ -4,20 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather application</title>
-    <link rel="stylesheet" href="./src/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#222]">
-    <div class="w-[90%] max-w-[470px] bg-gradient-to-br from-[#00feba] to-[#5b548a] text-white mx-auto mt-[100px] mb-0 rounded-[20px] px-[35px] py-[40px] text-center">
+<body class="bg-[#101a22] min-h-screen">
+    <div class="w-[90%] max-w-[470px] mx-auto mt-[100px] mb-0 rounded-[20px] px-[35px] py-[40px] text-center text-white border border-white/10 backdrop-blur-md shadow-xl bg-gradient-to-b from-[#1a2c3d] via-[#101a22] to-background-dark">
+
         <div class="w-full flex items-center justify-between">
-            <input class="border-0 outline-none bg-[#ebfffc] text-[#555] py-[10px] px-[25px] h-[60px] rounded-[30px] flex-1 mr-4 text-[18px]" type="text" placeholder="Enter city name" spellcheck="false">
-            <button class="border-0 outline-none bg-[#ebfffc] rounded-[50%] w-[60px] h-[60px] cursor-pointer flex items-center justify-center">
+            <input 
+                class="border-0 outline-none bg-white/10 text-white placeholder:text-slate-400 py-[10px] px-[25px] h-[60px] rounded-[30px] flex-1 mr-4 text-[18px] focus:ring-2 focus:ring-blue-400/50" 
+                type="text" 
+                placeholder="Enter city name" 
+                spellcheck="false">
+            <button class="border-0 outline-none bg-white/10 hover:bg-blue-500/30 rounded-full w-[60px] h-[60px] cursor-pointer flex items-center justify-center transition-all">
                 <img class="w-[17px]" src="images/search.png" alt="pic">
             </button>
         </div>
+
         <div class="weather">
-            <img src="images/rain.png" alt="">
-            <h1 class="temp"></h1>
+            <img class="w-[150px] mt-[30px] mx-auto block" src="images/rain.png" alt="ra">
+            <h1 class="text-[80px] font-bold">2°C</h1>
+            <h2 class="text-[45px] mt-[-10px] font-bold">Chicago</h2>
+            <div class="details">
+                <div class="col">
+                    <img class="mx-auto block" src="images/humidity.png" alt="hum">
+                    <div class="Humidity">
+                        <p class="text-[27px] font-bold">50%</p>
+                        <p class="text-[27px] font-bold">Humidity</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <img class="mx-auto block" src="images/wind.png" alt="hum">
+                    <div class="wind">
+                        <p class="text-[27px] font-bold">20 km/h</p>
+                        <p class="text-[27px] font-bold">Wind Speed</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
 </body>
 </html>
