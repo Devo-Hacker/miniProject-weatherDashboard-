@@ -6,7 +6,7 @@
     <title>Weather application</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#101a22] min-h-screen">
+<body class="bg-[#101a22] h-screen">
     <div class="w-[90%] max-w-[470px] mx-auto mt-[100px] mb-0 rounded-[20px] px-[35px] py-[40px] text-center text-white border border-white/10 backdrop-blur-md shadow-xl bg-gradient-to-b from-[#1a2c3d] via-[#101a22] to-background-dark">
 
         <div class="w-full flex items-center justify-between">
@@ -22,22 +22,22 @@
 
         <div class="weather">
             <img class="w-[150px] mt-[30px] mx-auto block" src="images/rain.png" alt="ra">
-            <h1 class="text-[80px] font-bold">2°C</h1>
-            <h2 class="text-[45px] mt-[-10px] font-bold">Chicago</h2>
-            <div class="details">
-                <div class="col">
-                    <img class="mx-auto block" src="images/humidity.png" alt="hum">
+            <h1 class="text-[70px] font-bold">2°C</h1>
+            <h2 class="text-[40px] mt-[-10px] font-bold">Chicago</h2>
+            <div class="flex items-center justify-between py-0 px-[20px] mt-[50px]">
+                <div class="flex items-center text-left">
+                    <img class="mx-auto block w-[40px] mr-[10px]" src="images/humidity.png" alt="hum">
                     <div class="Humidity">
-                        <p class="text-[27px] font-bold">50%</p>
-                        <p class="text-[27px] font-bold">Humidity</p>
+                        <p class="text-[20px] font-bold">50%</p>
+                        <p class="text-[15px]">Humidity</p>
                     </div>
                 </div>
 
-                <div class="col">
-                    <img class="mx-auto block" src="images/wind.png" alt="hum">
+                <div class="flex items-center text-left">
+                    <img class="mx-auto block w-[40px] mr-[10px]" src="images/wind.png" alt="hum">
                     <div class="wind">
-                        <p class="text-[27px] font-bold">20 km/h</p>
-                        <p class="text-[27px] font-bold">Wind Speed</p>
+                        <p class="text-[20px] font-bold">20 km/h</p>
+                        <p class="text-[15px]">Wind Speed</p>
                     </div>
                 </div>
             </div>
