@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather application</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./src/output.css">
 </head>
-<body class="bg-[#101a22] h-screen">
-    <div class="w-[90%] max-w-[470px] mx-auto mt-[100px] mb-0 rounded-[20px] px-[35px] py-[40px] text-center text-white border border-white/10 backdrop-blur-md shadow-xl bg-gradient-to-b from-[#1a2c3d] via-[#101a22] to-background-dark">
+<body class="bg-[#101a22] h-screen flex items-center justify-center">
+    <div class="w-[90%] max-w-[470px] mx-auto mb-0 rounded-[20px] px-[35px] py-[40px] text-center text-white border border-white/10 backdrop-blur-md shadow-xl bg-gradient-to-b from-[#1a2c3d] via-[#101a22] to-background-dark">
 
         <div class="w-full flex items-center justify-between">
             <input 
@@ -22,21 +22,21 @@
 
         <div class="weather">
             <img class="w-[150px] mt-[30px] mx-auto block" src="images/rain.png" alt="ra">
-            <h1 class="text-[70px] font-bold">2°C</h1>
-            <h2 class="text-[40px] mt-[-10px] font-bold">Chicago</h2>
+            <h1 class="text-[70px] font-bold" data-temp>2°C</h1>
+            <h2 class="text-[40px] mt-[-10px] font-bold" data-city>Chicago</h2>
             <div class="flex items-center justify-between py-0 px-[20px] mt-[50px]">
-                <div class="flex items-center text-left">
+                <div class="flex items-center text-left" data-col>
                     <img class="mx-auto block w-[40px] mr-[10px]" src="images/humidity.png" alt="hum">
-                    <div class="Humidity">
-                        <p class="text-[20px] font-bold">50%</p>
+                    <div class="mt-[-6px]">
+                        <p class="text-[20px] font-bold" data-humidity>50%</p>
                         <p class="text-[15px]">Humidity</p>
                     </div>
                 </div>
 
-                <div class="flex items-center text-left">
+                <div class="flex items-center text-left" data-col>
                     <img class="mx-auto block w-[40px] mr-[10px]" src="images/wind.png" alt="hum">
-                    <div class="wind">
-                        <p class="text-[20px] font-bold">20 km/h</p>
+                    <div class="mt-[-6px]">
+                        <p class="text-[20px] font-bold" data-wind>20 km/h</p>
                         <p class="text-[15px]">Wind Speed</p>
                     </div>
                 </div>
@@ -44,5 +44,24 @@
         </div>
 
     </div>
+
+    <script>
+        const apiKey = "59455a91951625afcd93d655aa331cbb";
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=Phagwara";
+
+        async function checkWeather(){
+            const response = await fetch(apiUrl + `&appid=${apiKey}`);
+            var data = await response.json();
+
+            console.log(data);
+
+            document.querySelector("[data-city]").innerHTML = data.name;
+            document.querySelector("[data-temp]").innerHTML = data.main.temp +"°C";
+            document.querySelector("[data-humidity]").innerHTML = data.main.humidity + "%";
+            document.querySelector("[data-wind]").innerHTML = data.wind.speed +"km/h";
+        }
+
+        checkWeather();
+    </script>
 </body>
 </html>

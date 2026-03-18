@@ -9,9 +9,7 @@
       "Courier New", monospace;
     --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-blue-500: oklch(62.3% 0.214 259.815);
-    --color-slate-100: oklch(96.8% 0.007 247.896);
     --color-slate-400: oklch(70.4% 0.04 256.788);
-    --color-slate-900: oklch(20.8% 0.042 265.755);
     --color-white: #fff;
     --spacing: 0.25rem;
     --font-weight-bold: 700;
@@ -174,8 +172,14 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .mt-\[-6px\] {
+    margin-top: -6px;
+  }
   .mt-\[-10px\] {
     margin-top: -10px;
+  }
+  .mt-\[-\] {
+    margin-top: -;
   }
   .mt-\[30px\] {
     margin-top: 30px;
@@ -209,9 +213,6 @@
   }
   .h-screen {
     height: 100vh;
-  }
-  .min-h-screen {
-    min-height: 100vh;
   }
   .w-\[17px\] {
     width: 17px;
@@ -306,32 +307,17 @@
     --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-via-stops);
   }
-  .px-5 {
-    padding-inline: calc(var(--spacing) * 5);
-  }
-  .px-\[19px\] {
-    padding-inline: 19px;
-  }
   .px-\[20px\] {
     padding-inline: 20px;
   }
   .px-\[25px\] {
     padding-inline: 25px;
   }
-  .px-\[27px\] {
-    padding-inline: 27px;
-  }
   .px-\[35px\] {
     padding-inline: 35px;
   }
   .py-0 {
     padding-block: calc(var(--spacing) * 0);
-  }
-  .py-1 {
-    padding-block: calc(var(--spacing) * 1);
-  }
-  .py-2 {
-    padding-block: calc(var(--spacing) * 2);
   }
   .py-\[10px\] {
     padding-block: 10px;
@@ -345,9 +331,6 @@
   .text-left {
     text-align: left;
   }
-  .text-\[2px\] {
-    font-size: 2px;
-  }
   .text-\[15px\] {
     font-size: 15px;
   }
@@ -357,27 +340,15 @@
   .text-\[20px\] {
     font-size: 20px;
   }
-  .text-\[27px\] {
-    font-size: 27px;
-  }
   .text-\[40px\] {
     font-size: 40px;
-  }
-  .text-\[45px\] {
-    font-size: 45px;
   }
   .text-\[70px\] {
     font-size: 70px;
   }
-  .text-\[80px\] {
-    font-size: 80px;
-  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
-  }
-  .text-\[px\] {
-    color: px;
   }
   .text-white {
     color: var(--color-white);
