@@ -6,44 +6,110 @@
     <title>Weather application</title>
     <link rel="stylesheet" href="./src/output.css">
 </head>
-<body class="bg-[#101a22] h-screen flex items-center justify-center">
-    <div class="w-[90%] max-w-[470px] mx-auto mb-0 rounded-[20px] px-[35px] py-[40px] text-center text-white border border-white/10 backdrop-blur-md shadow-xl bg-gradient-to-b from-[#1a2c3d] via-[#101a22] to-background-dark" data-card>
 
-        <div class="w-full flex items-center justify-between" data-search>
+<body class="bg-[#0b1c26] text-white min-h-screen p-6">
+
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+    <div class="lg:col-span-1 backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 shadow-2xl animate-fadeIn hover:scale-[1.02] transition-all duration-300">
+
+        <div class="flex items-center justify-between mb-6" data-search>
             <input 
-                class="border-0 outline-none bg-white/10 text-white placeholder:text-slate-400 py-[10px] px-[25px] h-[60px] rounded-[30px] flex-1 mr-4 text-[18px] focus:ring-2 focus:ring-blue-400/50" 
-                type="text" 
-                placeholder="Enter city name" 
+                class="w-full bg-white/10 text-white placeholder:text-slate-400 px-4 py-3 rounded-xl outline-none focus:ring-2 focus:ring-blue-400/50 transition-all"
+                type="text"
+                placeholder="Enter city name"
                 spellcheck="false">
-            <button class="border-0 outline-none bg-white/10 hover:bg-blue-500/30 rounded-full w-[60px] h-[60px] cursor-pointer flex items-center justify-center transition-all">
-                <img class="w-[17px]" src="images/search.png" alt="pic">
+
+            <button class="ml-3 bg-white/10 hover:bg-blue-500/30 p-3 rounded-xl transition-all duration-300 hover:scale-110 active:scale-95">
+                <img class="w-[16px]" src="images/search.png">
             </button>
         </div>
 
-        <div class="hidden" data-weather>
-            <img class="w-[150px] mt-[30px] mx-auto block" src="images/rain.png" alt="ra" data-weather-icon>
-            <h1 class="text-[70px] font-bold" data-temp>2°C</h1>
-            <h2 class="text-[40px] mt-[-10px] font-bold" data-city>Chicago</h2>
-            <div class="flex items-center justify-between py-0 px-[20px] mt-[50px]">
-                <div class="flex items-center text-left" data-col>
-                    <img class="mx-auto block w-[40px] mr-[10px]" src="images/humidity.png" alt="hum">
-                    <div class="mt-[-6px]">
-                        <p class="text-[20px] font-bold" data-humidity>50%</p>
-                        <p class="text-[15px]">Humidity</p>
+        <div class="hidden text-red-400 text-sm mb-4 animate-fadeIn" data-error>
+            Invalid name
+        </div>
+
+        <div class="hidden text-center animate-fadeIn" data-weather>
+
+            <img class="w-[120px] mx-auto animate-float" src="images/rain.png" data-weather-icon>
+
+            <h1 class="text-6xl font-extrabold mt-4 tracking-tight" data-temp>--°C</h1>
+            <h2 class="text-2xl font-semibold mt-2 text-slate-300" data-city>City</h2>
+
+            <div class="flex justify-between mt-10">
+
+                <div class="flex items-center gap-3">
+                    <img class="w-8" src="images/humidity.png">
+                    <div>
+                        <p class="font-bold text-lg" data-humidity>--%</p>
+                        <p class="text-sm text-slate-400">Humidity</p>
                     </div>
                 </div>
 
-                <div class="flex items-center text-left" data-col>
-                    <img class="mx-auto block w-[40px] mr-[10px]" src="images/wind.png" alt="hum">
-                    <div class="mt-[-6px]">
-                        <p class="text-[20px] font-bold" data-wind>20 km/h</p>
-                        <p class="text-[15px]">Wind Speed</p>
+                <div class="flex items-center gap-3">
+                    <img class="w-8" src="images/wind.png">
+                    <div>
+                        <p class="font-bold text-lg" data-wind>-- km/h</p>
+                        <p class="text-sm text-slate-400">Wind</p>
                     </div>
                 </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="lg:col-span-2 space-y-6">
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+            <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-5 rounded-xl shadow-xl hover:scale-105 transition-all duration-300 animate-fadeIn">
+                <p class="text-xs text-slate-400 uppercase">Humidity</p>
+                <p class="text-xl font-bold mt-1" data-humidity-box>--%</p>
+            </div>
+
+            <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-5 rounded-xl shadow-xl hover:scale-105 transition-all duration-300 animate-fadeIn">
+                <p class="text-xs text-slate-400 uppercase">Wind</p>
+                <p class="text-xl font-bold mt-1" data-wind-box>--</p>
+            </div>
+
+            <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-5 rounded-xl shadow-xl hover:scale-105 transition-all duration-300 animate-fadeIn">
+                <p class="text-xs text-slate-400 uppercase">UV Index</p>
+                <p class="text-xl font-bold mt-1" data-uv>--</p>
+            </div>
+
+            <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-5 rounded-xl shadow-xl hover:scale-105 transition-all duration-300 animate-fadeIn">
+                <p class="text-xs text-slate-400 uppercase">Air Quality</p>
+                <p class="text-xl font-bold mt-1" data-air>--</p>
+            </div>
+
+        </div>
+
+        <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-xl shadow-xl flex justify-between hover:scale-[1.01] transition-all duration-300 animate-fadeIn">
+            <div>
+                <p class="text-xs text-slate-400 uppercase">Sunrise</p>
+                <p class="text-lg font-bold mt-1" data-sunrise>--</p>
+            </div>
+            <div>
+                <p class="text-xs text-slate-400 uppercase">Sunset</p>
+                <p class="text-lg font-bold mt-1" data-sunset>--</p>
             </div>
         </div>
 
+        <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-xl shadow-xl animate-fadeIn">
+            <p class="mb-4 font-semibold text-slate-300">7-Day Forecast</p>
+            <div class="space-y-2" data-forecast></div>
+        </div>
+
+        <div class="hidden backdrop-blur-xl bg-red-500/10 border border-red-400/30 p-6 rounded-xl shadow-xl animate-fadeIn" data-alert>
+            <p class="text-red-400 font-semibold mb-2">Weather Alert</p>
+            <p class="text-sm" data-alert-text></p>
+        </div>
+
     </div>
+
+</div>
+
 <script src="weaather.js"></script>
+
 </body>
 </html>
