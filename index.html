@@ -6,16 +6,26 @@
     <title>Weather application</title>
     <link rel="stylesheet" href="./src/output.css">
 </head>
+<style>
+  body {
+    background-image:
+      radial-gradient(ellipse 90% 70% at 10% 10%,  rgba(56,189,248,0.20) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 60% at 90% 5%,   rgba(139,92,246,0.16) 0%, transparent 55%),
+      radial-gradient(ellipse 80% 55% at 50% 100%, rgba(236,72,153,0.13) 0%, transparent 60%),
+      radial-gradient(ellipse 55% 45% at 80% 55%,  rgba(43,157,238,0.10) 0%, transparent 50%),
+      radial-gradient(ellipse 45% 40% at 20% 75%,  rgba(168,85,247,0.09) 0%, transparent 50%);
+  }
+</style>
 
-<body class="bg-[#0b1c26] text-white min-h-screen p-6">
+<body class="bg-[#0a1628] text-white min-h-screen p-6">
 
 <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-    <div class="lg:col-span-1 backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 shadow-2xl animate-fadeIn hover:scale-[1.02] transition-all duration-300">
+    <div class="lg:col-span-1 backdrop-blur-xl bg-white/2 border border-white/10 rounded-2xl p-6 shadow-2xl animate-fadeIn hover:scale-[1.02] transition-all duration-300">
 
         <div class="flex items-center justify-between mb-6" data-search>
             <input 
-                class="w-full bg-white/10 text-white placeholder:text-slate-400 px-4 py-3 rounded-xl outline-none focus:ring-2 focus:ring-blue-400/50 transition-all"
+                class="w-full bg-white/10 text-white placeholder:text-slate-300 px-4 py-3 rounded-xl outline-none focus:ring-2 focus:ring-blue-400/50 transition-all"
                 type="text"
                 placeholder="Enter city name"
                 spellcheck="false">
@@ -42,7 +52,7 @@
                     <img class="w-8" src="images/humidity.png">
                     <div>
                         <p class="font-bold text-lg" data-humidity>--%</p>
-                        <p class="text-sm text-slate-400">Humidity</p>
+                        <p class="text-sm text-slate-300">Humidity</p>
                     </div>
                 </div>
 
@@ -50,7 +60,7 @@
                     <img class="w-8" src="images/wind.png">
                     <div>
                         <p class="font-bold text-lg" data-wind>-- km/h</p>
-                        <p class="text-sm text-slate-400">Wind</p>
+                        <p class="text-sm text-slate-300">Wind</p>
                     </div>
                 </div>
 
@@ -63,22 +73,22 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 
             <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-5 rounded-xl shadow-xl hover:scale-105 transition-all duration-300 animate-fadeIn">
-                <p class="text-xs text-slate-400 uppercase">Humidity</p>
+                <p class="text-xs text-slate-200 uppercase">Humidity</p>
                 <p class="text-xl font-bold mt-1" data-humidity-box>--%</p>
             </div>
 
             <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-5 rounded-xl shadow-xl hover:scale-105 transition-all duration-300 animate-fadeIn">
-                <p class="text-xs text-slate-400 uppercase">Wind</p>
+                <p class="text-xs text-slate-200 uppercase">Wind</p>
                 <p class="text-xl font-bold mt-1" data-wind-box>--</p>
             </div>
 
             <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-5 rounded-xl shadow-xl hover:scale-105 transition-all duration-300 animate-fadeIn">
-                <p class="text-xs text-slate-400 uppercase">UV Index</p>
+                <p class="text-xs text-slate-200 uppercase">UV Index</p>
                 <p class="text-xl font-bold mt-1" data-uv>--</p>
             </div>
 
             <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-5 rounded-xl shadow-xl hover:scale-105 transition-all duration-300 animate-fadeIn">
-                <p class="text-xs text-slate-400 uppercase">Air Quality</p>
+                <p class="text-xs text-slate-200 uppercase">Air Quality</p>
                 <p class="text-xl font-bold mt-1" data-air>--</p>
             </div>
 
@@ -96,7 +106,7 @@
         </div>
 
         <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-xl shadow-xl animate-fadeIn">
-            <p class="mb-4 font-semibold text-slate-300">7-Day Forecast</p>
+            <p class="mb-4 font-semibold text-slate-400">7-Day Forecast</p>
             <div class="space-y-2" data-forecast></div>
         </div>
 
